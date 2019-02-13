@@ -1,0 +1,3 @@
+() - callFuncion/Method
+[] - arrays, objects for some reason 
+{} - object, codeBlock
