@@ -8,7 +8,7 @@ let calculator=function(a,b,c){
             return a*c;
         case "/" :
             if (c==0){
-                console.log("Error, can't divide by zero")
+                return "Error, can't divide by zero"
             }
             return (a/c)
     }
