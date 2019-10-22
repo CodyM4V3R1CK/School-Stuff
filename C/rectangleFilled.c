@@ -2,14 +2,14 @@
 
 int main(){
 
-    int a, b, i = 1,x;
+    int a, b, i = 1, x;
 
     printf("zadaj rozmery\n");
     scanf("%d %d", &a, &b);
 
-    while(i <= a){
+    while(i <= b){
         x = 1;
-        while(x <= b){
+        while(x <= a){
             printf("#");
             x++;
         }
