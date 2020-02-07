@@ -2,7 +2,7 @@
 
 int main(){
 
-    int a, i, aa, b;
+    int a, i, aa;
 
     printf("zadaj cislo:\n");
     scanf("%d", &a);
@@ -20,13 +20,13 @@ int main(){
     }
 
     if(a == 0){
-        a=2;
+        a = 2;
         while(a <= aa){
-            b = a;
-            while(b <= aa){
+            i = a;
+            while(i <= aa){
                 printf("*");
-                b++;
-            }
+                i++;
+                }
             printf("\n");
             a++;
         }
