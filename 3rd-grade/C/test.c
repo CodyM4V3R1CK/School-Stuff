@@ -7,5 +7,6 @@ int main(void){
     printf("zadaj cislo: ");
     scanf("%d", &a);
     printf("tvoje cislo je: %d\n", a);
+
     return 0;
 }
