@@ -3,11 +3,17 @@
 int main(void){
 
     int number;
+    float inputNum;
 
     printf("zadaj cislo od 0-1000:\n");
-    scanf("%d", &number);
+    scanf("%f", &inputNum);
 
-    if(number < 0 || number > 1000){
+    number = (int)inputNum;
+
+    if(number != inputNum){
+        printf("desatinne cisla nie");
+        return 0;
+    }else if(number < 0 || number > 1000){
         printf("wrong number");
         return 0;
     }else if(number == 0){
