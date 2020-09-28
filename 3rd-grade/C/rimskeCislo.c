@@ -102,7 +102,5 @@ int main(void){
             number-=1;
         }
     }
-
     return 0;
-
 }
