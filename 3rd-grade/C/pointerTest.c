@@ -3,10 +3,14 @@
 void vypisPola(int *number, int width);
 void bubbleSort(int *number, int width);
 
+typedef struct {
+    int vyska;
+    float hmotnost;
+}MIERY;
+
+
 int main (void){
-
     int cisla[] = {100, -1, -35, 50, 77, -5, 22, 21, 23}, i = 0;
-
     int sirka = sizeof(cisla)/sizeof(int);
 
     vypisPola(cisla, sirka);
@@ -14,6 +18,14 @@ int main (void){
 
     bubbleSort(cisla, sirka);
     vypisPola(cisla, sirka);
+
+    MIERY matej = {168, 90.2};
+
+    MIERY *ptr;
+    ptr = &matej;
+
+    printf("\nmatej.vyska = %d\n", (*ptr).vyska);
+    printf("matej.hmotnost = %.1f\n", ptr->hmotnost);
 
     return 0;
 }
