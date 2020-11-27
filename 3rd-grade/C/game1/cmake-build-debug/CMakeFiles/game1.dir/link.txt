@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/game1.dir/main.c.o  -o game1 
