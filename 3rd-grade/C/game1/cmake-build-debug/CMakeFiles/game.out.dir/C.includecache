@@ -11,6 +11,14 @@ stdio.h
 -
 stdlib.h
 -
+sys/time.h
+-
 time.h
+-
+termio.h
+-
+unistd.h
+-
+fcntl.h
 -
 

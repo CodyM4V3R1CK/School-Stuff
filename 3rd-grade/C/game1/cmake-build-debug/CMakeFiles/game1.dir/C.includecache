@@ -15,4 +15,10 @@ sys/time.h
 -
 time.h
 -
+termio.h
+-
+unistd.h
+-
+fcntl.h
+-
 
