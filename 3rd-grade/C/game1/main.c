@@ -5,12 +5,9 @@
 #include <termio.h>
 #include <unistd.h>
 #include <fcntl.h>
-//#include <conio.h>
 
 int getch(void);
 int kbhit(void);
-
-
 
 int main() {
     int a = 0, b = 0, hadanyZnak = 0;
@@ -23,16 +20,12 @@ int main() {
         while(getch()!= 83){
             printf("F1 - Napoveda \t F2 - Start/Restart \t F4 - Koniec\n");
             a = getch();
-//            printf("%d\n", a);
             if(a == 27){
                 a = getch();
-//                printf("%d\n", a);
                 if(a == 79){
                     a = getch();
-//                    printf("%d\n", a);
                 }
             }
-//        printf("%d\n", a);
 
 // prve menu
 
@@ -52,6 +45,7 @@ int main() {
 //menu po 1
 
             b = getch();
+
             game:
             if(b == 81){
                 system("clear"); //clear terminal
@@ -61,7 +55,9 @@ int main() {
                 printf("%c\n", randomLetter);
 
 //  hadame znak a zistujeme cas
+
                 gettimeofday(&start, NULL);
+
                 do {
                     hadanyZnak = getch();
                     if(hadanyZnak == 83){
@@ -70,6 +66,7 @@ int main() {
                     hadaneZnaky[pocetPokusov] = hadanyZnak;
                     pocetPokusov++;
                 }while (hadanyZnak != randomLetter);
+
                 gettimeofday(&stop, NULL);
                 double time;
                 time = (stop.tv_sec - start.tv_sec) * 1000;
