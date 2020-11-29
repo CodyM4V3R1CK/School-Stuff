@@ -44,6 +44,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/game.out.dir/DependInfo.cmake"
   "CMakeFiles/game1.dir/DependInfo.cmake"
+  "CMakeFiles/gameBonus.out.dir/DependInfo.cmake"
+  "CMakeFiles/game.out.dir/DependInfo.cmake"
   )

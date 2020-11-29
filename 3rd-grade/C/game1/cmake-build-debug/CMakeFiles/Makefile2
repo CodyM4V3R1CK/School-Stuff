@@ -73,8 +73,9 @@ CMAKE_BINARY_DIR = /home/cody/Work/School-Stuff/3rd-grade/C/game1/cmake-build-de
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/game.out.dir/all
 all: CMakeFiles/game1.dir/all
+all: CMakeFiles/gameBonus.out.dir/all
+all: CMakeFiles/game.out.dir/all
 
 .PHONY : all
 
@@ -84,37 +85,11 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/game.out.dir/clean
 clean: CMakeFiles/game1.dir/clean
+clean: CMakeFiles/gameBonus.out.dir/clean
+clean: CMakeFiles/game.out.dir/clean
 
 .PHONY : clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/game.out.dir
-
-# All Build rule for target.
-CMakeFiles/game.out.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.out.dir/build.make CMakeFiles/game.out.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.out.dir/build.make CMakeFiles/game.out.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/cody/Work/School-Stuff/3rd-grade/C/game1/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target game.out"
-.PHONY : CMakeFiles/game.out.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/game.out.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/cody/Work/School-Stuff/3rd-grade/C/game1/cmake-build-debug/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/game.out.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/cody/Work/School-Stuff/3rd-grade/C/game1/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/game.out.dir/rule
-
-# Convenience name for target.
-game.out: CMakeFiles/game.out.dir/rule
-
-.PHONY : game.out
-
-# clean rule for target.
-CMakeFiles/game.out.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.out.dir/build.make CMakeFiles/game.out.dir/clean
-.PHONY : CMakeFiles/game.out.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/game1.dir
@@ -142,6 +117,60 @@ game1: CMakeFiles/game1.dir/rule
 CMakeFiles/game1.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/game1.dir/build.make CMakeFiles/game1.dir/clean
 .PHONY : CMakeFiles/game1.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/gameBonus.out.dir
+
+# All Build rule for target.
+CMakeFiles/gameBonus.out.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gameBonus.out.dir/build.make CMakeFiles/gameBonus.out.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gameBonus.out.dir/build.make CMakeFiles/gameBonus.out.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/cody/Work/School-Stuff/3rd-grade/C/game1/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target gameBonus.out"
+.PHONY : CMakeFiles/gameBonus.out.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/gameBonus.out.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cody/Work/School-Stuff/3rd-grade/C/game1/cmake-build-debug/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/gameBonus.out.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cody/Work/School-Stuff/3rd-grade/C/game1/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/gameBonus.out.dir/rule
+
+# Convenience name for target.
+gameBonus.out: CMakeFiles/gameBonus.out.dir/rule
+
+.PHONY : gameBonus.out
+
+# clean rule for target.
+CMakeFiles/gameBonus.out.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gameBonus.out.dir/build.make CMakeFiles/gameBonus.out.dir/clean
+.PHONY : CMakeFiles/gameBonus.out.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/game.out.dir
+
+# All Build rule for target.
+CMakeFiles/game.out.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.out.dir/build.make CMakeFiles/game.out.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.out.dir/build.make CMakeFiles/game.out.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/cody/Work/School-Stuff/3rd-grade/C/game1/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target game.out"
+.PHONY : CMakeFiles/game.out.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/game.out.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cody/Work/School-Stuff/3rd-grade/C/game1/cmake-build-debug/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/game.out.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cody/Work/School-Stuff/3rd-grade/C/game1/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/game.out.dir/rule
+
+# Convenience name for target.
+game.out: CMakeFiles/game.out.dir/rule
+
+.PHONY : game.out
+
+# clean rule for target.
+CMakeFiles/game.out.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.out.dir/build.make CMakeFiles/game.out.dir/clean
+.PHONY : CMakeFiles/game.out.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

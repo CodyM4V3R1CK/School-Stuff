@@ -131,19 +131,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named game.out
-
-# Build rule for target.
-game.out: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game.out
-.PHONY : game.out
-
-# fast build rule for target.
-game.out/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.out.dir/build.make CMakeFiles/game.out.dir/build
-.PHONY : game.out/fast
-
-#=============================================================================
 # Target rules for targets named game1
 
 # Build rule for target.
@@ -156,14 +143,67 @@ game1/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/game1.dir/build.make CMakeFiles/game1.dir/build
 .PHONY : game1/fast
 
+#=============================================================================
+# Target rules for targets named gameBonus.out
+
+# Build rule for target.
+gameBonus.out: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gameBonus.out
+.PHONY : gameBonus.out
+
+# fast build rule for target.
+gameBonus.out/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gameBonus.out.dir/build.make CMakeFiles/gameBonus.out.dir/build
+.PHONY : gameBonus.out/fast
+
+#=============================================================================
+# Target rules for targets named game.out
+
+# Build rule for target.
+game.out: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game.out
+.PHONY : game.out
+
+# fast build rule for target.
+game.out/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.out.dir/build.make CMakeFiles/game.out.dir/build
+.PHONY : game.out/fast
+
+bonus.o: bonus.c.o
+
+.PHONY : bonus.o
+
+# target to build an object file
+bonus.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gameBonus.out.dir/build.make CMakeFiles/gameBonus.out.dir/bonus.c.o
+.PHONY : bonus.c.o
+
+bonus.i: bonus.c.i
+
+.PHONY : bonus.i
+
+# target to preprocess a source file
+bonus.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gameBonus.out.dir/build.make CMakeFiles/gameBonus.out.dir/bonus.c.i
+.PHONY : bonus.c.i
+
+bonus.s: bonus.c.s
+
+.PHONY : bonus.s
+
+# target to generate assembly for a file
+bonus.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gameBonus.out.dir/build.make CMakeFiles/gameBonus.out.dir/bonus.c.s
+.PHONY : bonus.c.s
+
 main.o: main.c.o
 
 .PHONY : main.o
 
 # target to build an object file
 main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.out.dir/build.make CMakeFiles/game.out.dir/main.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/game1.dir/build.make CMakeFiles/game1.dir/main.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.out.dir/build.make CMakeFiles/game.out.dir/main.c.o
 .PHONY : main.c.o
 
 main.i: main.c.i
@@ -172,8 +212,8 @@ main.i: main.c.i
 
 # target to preprocess a source file
 main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.out.dir/build.make CMakeFiles/game.out.dir/main.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/game1.dir/build.make CMakeFiles/game1.dir/main.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.out.dir/build.make CMakeFiles/game.out.dir/main.c.i
 .PHONY : main.c.i
 
 main.s: main.c.s
@@ -182,8 +222,8 @@ main.s: main.c.s
 
 # target to generate assembly for a file
 main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.out.dir/build.make CMakeFiles/game.out.dir/main.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/game1.dir/build.make CMakeFiles/game1.dir/main.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.out.dir/build.make CMakeFiles/game.out.dir/main.c.s
 .PHONY : main.c.s
 
 # Help Target
@@ -196,6 +236,10 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... game.out"
 	@echo "... game1"
+	@echo "... gameBonus.out"
+	@echo "... bonus.o"
+	@echo "... bonus.i"
+	@echo "... bonus.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

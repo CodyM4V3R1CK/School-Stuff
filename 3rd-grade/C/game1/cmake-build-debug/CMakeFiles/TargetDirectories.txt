@@ -1,4 +1,5 @@
 /home/cody/Work/School-Stuff/3rd-grade/C/game1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/cody/Work/School-Stuff/3rd-grade/C/game1/cmake-build-debug/CMakeFiles/game.out.dir
-/home/cody/Work/School-Stuff/3rd-grade/C/game1/cmake-build-debug/CMakeFiles/edit_cache.dir
 /home/cody/Work/School-Stuff/3rd-grade/C/game1/cmake-build-debug/CMakeFiles/game1.dir
+/home/cody/Work/School-Stuff/3rd-grade/C/game1/cmake-build-debug/CMakeFiles/gameBonus.out.dir
+/home/cody/Work/School-Stuff/3rd-grade/C/game1/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/cody/Work/School-Stuff/3rd-grade/C/game1/cmake-build-debug/CMakeFiles/game.out.dir

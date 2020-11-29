@@ -5,3 +5,4 @@ set(CMAKE_C_STANDARD 99)
 
 add_executable(game1 main.c)
 add_executable(game.out main.c)
+add_executable(gameBonus.out bonus.c)
