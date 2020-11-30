@@ -30,13 +30,14 @@ int main() {
             a = getch();
             if(a == 27){
                 a = getch();
-                if(a == 79){
-                    a = getch();
-                }
+                printf("%d ", a);
+            }
+            if(a == 79){
+                a = getch();
+                printf("%d ", a);
             }
 
 // prve menu
-            printf("%d", a);
 
             if (a == 80){ //49
                 system("clear");
@@ -84,121 +85,120 @@ int main() {
                     goto game;
                 }
             }
-        }
+            //menu po 1
 
-//menu po 1
+            b = getch();
 
-        b = getch();
-
-        game:
-        if(b == 81){
-            system("clear"); //clear terminal
-            char randomLetter = (rand()%(122 - 97 + 1)) + 97; //ascii kod pismena
-            char hadaneZnaky[30];
-            int pocetPokusov = 0;
-            printf("%c\n", randomLetter);
+            game:
+            if(b == 81){
+                system("clear"); //clear terminal
+                char randomLetter = (rand()%(122 - 97 + 1)) + 97; //ascii kod pismena
+                char hadaneZnaky[30];
+                int pocetPokusov = 0;
+                printf("%c\n", randomLetter);
 
 //  hadame znak a zistujeme cas
 
-            gettimeofday(&start, NULL);
+                gettimeofday(&start, NULL);
 
 
-            do {
-                hadanyZnak = getch();
-                if(hadanyZnak == 83){
-                    return 0;
-                }
-                hadaneZnaky[pocetPokusov] = hadanyZnak;
-                pocetPokusov++;
-            }while (hadanyZnak != randomLetter);
+                do {
+                    hadanyZnak = getch();
+                    if(hadanyZnak == 83){
+                        return 0;
+                    }
+                    hadaneZnaky[pocetPokusov] = hadanyZnak;
+                    pocetPokusov++;
+                }while (hadanyZnak != randomLetter);
 
-            gettimeofday(&stop, NULL);
-            double time;
-            time = (stop.tv_sec - start.tv_sec) * 1000;
-            time += (stop.tv_usec - start.tv_usec) / 1000.0;
-            time /= 1000;
+                gettimeofday(&stop, NULL);
+                double time;
+                time = (stop.tv_sec - start.tv_sec) * 1000;
+                time += (stop.tv_usec - start.tv_usec) / 1000.0;
+                time /= 1000;
 //  vyherne hlasky
-            if(pocetPokusov == 1){
-                if(time <= 1){
-                    printf("\33[0;32m"); //green
-                    printf("cas bol: %.2f\n", time);
-                    printf("\33[0m");
-                    printf("Meno hraca: ");
-                    ii = 0;
-                    nameLenght = sizeof(playerName);
-                    while(ii <nameLenght){
-                        printf("%c", playerName[ii]);
-                        ii++;
+                if(pocetPokusov == 1){
+                    if(time <= 1){
+                        printf("\33[0;32m"); //green
+                        printf("cas bol: %.2f\n", time);
+                        printf("\33[0m");
+                        printf("Meno hraca: ");
+                        ii = 0;
+                        nameLenght = sizeof(playerName);
+                        while(ii <nameLenght){
+                            printf("%c", playerName[ii]);
+                            ii++;
+                        }
+                        printf("\nstlacili ste: %c\n", hadanyZnak);
+                        printf("F1 - Napoveda \t F2 - Start/Restart \t F3 - Meno hraca\t F4 - Koniec\n");
+                    }else if(time > 1 && time <= 1.5){
+                        printf("\33[0;36m"); //cyan
+                        printf("cas bol: %.2f\n", time);
+                        printf("\33[0m");
+                        printf("Meno hraca: ");
+                        ii = 0;
+                        nameLenght = sizeof(playerName);
+                        while(ii <nameLenght){
+                            printf("%c", playerName[ii]);
+                            ii++;
+                        }
+                        printf("\nstlacili ste: %c\n", hadanyZnak);;
+                        printf("F1 - Napoveda \t F2 - Start/Restart \t F3 - Meno hraca\t F4 - Koniec\n");
+                    }else if(time > 1.5){
+                        printf("\33[0;31m"); //red
+                        printf("cas bol: %.2f\n", time);
+                        printf("\33[0m");
+                        printf("Meno hraca: ");
+                        ii = 0;
+                        nameLenght = sizeof(playerName);
+                        while(ii <nameLenght){
+                            printf("%c", playerName[ii]);
+                            ii++;
+                        }
+                        printf("\nstlacili ste: %c\n", hadanyZnak);;
+                        printf("F1 - Napoveda \t F2 - Start/Restart \t F3 - Meno hraca\t F4 - Koniec\n");
                     }
-                    printf("\nstlacili ste: %c\n", hadanyZnak);
-                    printf("F1 - Napoveda \t F2 - Start/Restart \t F3 - Meno hraca\t F4 - Koniec\n");
-                }else if(time > 1 && time <= 1.5){
-                    printf("\33[0;36m"); //cyan
-                    printf("cas bol: %.2f\n", time);
-                    printf("\33[0m");
-                    printf("Meno hraca: ");
-                    ii = 0;
-                    nameLenght = sizeof(playerName);
-                    while(ii <nameLenght){
-                        printf("%c", playerName[ii]);
-                        ii++;
+                }else if(pocetPokusov >= 1){
+                    if(time <= 1){
+                        printf("\33[0;32m");
+                        printf("cas bol: %.2f\n", time);
+                        printf("\33[0m");
+                        printf("Postupne ste stlacali: ");
+                        int i = 0;
+                        while(i < pocetPokusov){
+                            printf("%c ", hadaneZnaky[i]);
+                            i++;
+                        }
+                        printf("\nF1 - Napoveda \t F2 - Start/Restart \t F3 - Meno hraca\t F4 - Koniec\n");
+                    }else if(time > 1 && time <= 1.5){
+                        printf("\33[0;36m");
+                        printf("cas bol: %.2f\n", time);
+                        printf("\33[0m");
+                        printf("Postupne ste stlacali: ");
+                        int i = 0;
+                        while(i < pocetPokusov){
+                            printf("%c ", hadaneZnaky[i]);
+                            i++;
+                        }
+                        printf("\nF1 - Napoveda \t F2 - Start/Restart \t F3 - Meno hraca\t F4 - Koniec\n");
+                    }else if(time > 1.5){
+                        printf("\33[0;31m");
+                        printf("cas bol: %.2f\n", time);
+                        printf("\33[0m");
+                        printf("Postupne ste stlacali: ");
+                        int i = 0;
+                        while(i < pocetPokusov){
+                            printf("%c ", hadaneZnaky[i]);
+                            i++;
+                        }
+                        printf("\nF1 - Napoveda \t F2 - Start/Restart \t F3 - Meno hraca\t F4 - Koniec\n");
                     }
-                    printf("\nstlacili ste: %c\n", hadanyZnak);;
-                    printf("F1 - Napoveda \t F2 - Start/Restart \t F3 - Meno hraca\t F4 - Koniec\n");
-                }else if(time > 1.5){
-                    printf("\33[0;31m"); //red
-                    printf("cas bol: %.2f\n", time);
-                    printf("\33[0m");
-                    printf("Meno hraca: ");
-                    ii = 0;
-                    nameLenght = sizeof(playerName);
-                    while(ii <nameLenght){
-                        printf("%c", playerName[ii]);
-                        ii++;
-                    }
-                    printf("\nstlacili ste: %c\n", hadanyZnak);;
-                    printf("F1 - Napoveda \t F2 - Start/Restart \t F3 - Meno hraca\t F4 - Koniec\n");
                 }
-            }else if(pocetPokusov >= 1){
-                if(time <= 1){
-                    printf("\33[0;32m");
-                    printf("cas bol: %.2f\n", time);
-                    printf("\33[0m");
-                    printf("Postupne ste stlacali: ");
-                    int i = 0;
-                    while(i < pocetPokusov){
-                        printf("%c ", hadaneZnaky[i]);
-                        i++;
-                    }
-                    printf("\nF1 - Napoveda \t F2 - Start/Restart \t F3 - Meno hraca\t F4 - Koniec\n");
-                }else if(time > 1 && time <= 1.5){
-                    printf("\33[0;36m");
-                    printf("cas bol: %.2f\n", time);
-                    printf("\33[0m");
-                    printf("Postupne ste stlacali: ");
-                    int i = 0;
-                    while(i < pocetPokusov){
-                        printf("%c ", hadaneZnaky[i]);
-                        i++;
-                    }
-                    printf("\nF1 - Napoveda \t F2 - Start/Restart \t F3 - Meno hraca\t F4 - Koniec\n");
-                }else if(time > 1.5){
-                    printf("\33[0;31m");
-                    printf("cas bol: %.2f\n", time);
-                    printf("\33[0m");
-                    printf("Postupne ste stlacali: ");
-                    int i = 0;
-                    while(i < pocetPokusov){
-                        printf("%c ", hadaneZnaky[i]);
-                        i++;
-                    }
-                    printf("\nF1 - Napoveda \t F2 - Start/Restart \t F3 - Meno hraca\t F4 - Koniec\n");
-                }
+            }else if(b == 83){
+                return 0;
             }
-        }else if(b == 83){
-            return 0;
+            printf("\n");
         }
-        printf("\n");
     }
 }
 

@@ -29,7 +29,7 @@ int main() {
 
 // prve menu
 
-            if (a = 79 || a == 80){ //49
+            if (a == 79 || a == 80){ //49
                 system("clear");
                 printf("Meranie bude spocivat v tom, ze program vygeneruje nahodny znak, zobrazi ho a spusti");
                 printf("meranie casu. \nMeranie sa zastavi v okamihu, ked uzivatel stlaci rovnaku klavesu. \n");
@@ -84,13 +84,13 @@ int main() {
                         printf("\33[0;36m"); //cyan
                         printf("cas bol: %.2f\n", time);
                         printf("\33[0m");
-                        printf("stlacili ste: %c", hadanyZnak);
+                        printf("stlacili ste: %c\n", hadanyZnak);
                         printf("F1 - Napoveda \t F2 - Start/Restart \t F4 - Koniec\n");
                     }else if(time > 1.5){
                         printf("\33[0;31m"); //red
                         printf("cas bol: %.2f\n", time);
                         printf("\33[0m");
-                        printf("stlacili ste: %c", hadanyZnak);
+                        printf("stlacili ste: %c\n", hadanyZnak);
                         printf("F1 - Napoveda \t F2 - Start/Restart \t F4 - Koniec\n");
                     }
                 }else if(pocetPokusov >= 1){

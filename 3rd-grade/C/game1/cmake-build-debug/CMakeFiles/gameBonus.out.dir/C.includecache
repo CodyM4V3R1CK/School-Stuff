@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/cody/Work/School-Stuff/3rd-grade/C/game1/bonus.c
+stdio.h
+-
+stdlib.h
+-
+sys/time.h
+-
+time.h
+-
+termio.h
+-
+unistd.h
+-
+fcntl.h
+-
+string.h
+-
+
