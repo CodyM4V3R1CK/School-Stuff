@@ -26,7 +26,7 @@ public class Main extends Application {
         });
         StackPane root=new StackPane();
         root.getChildren().add(btn1);
-        Scene scene=new Scene(root,600,400);
+        Scene scene=new Scene(root,1280,720);
         primaryStage.setTitle("First JavaFX Application");
         primaryStage.setScene(scene);
         primaryStage.show();
