@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Java.iml" filepath="$PROJECT_DIR$/.idea/Java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/animal/animal.iml" filepath="$PROJECT_DIR$/animal/animal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/animal2/animal2.iml" filepath="$PROJECT_DIR$/animal2/animal2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/firstAnimal/firstAnimal.iml" filepath="$PROJECT_DIR$/firstAnimal/firstAnimal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/firstJavaFX/firstJavaFX.iml" filepath="$PROJECT_DIR$/firstJavaFX/firstJavaFX.iml" />
+      <module fileurl="file://$PROJECT_DIR$/project#1/project#1.iml" filepath="$PROJECT_DIR$/project#1/project#1.iml" />
+    </modules>
+  </component>
+</project>
