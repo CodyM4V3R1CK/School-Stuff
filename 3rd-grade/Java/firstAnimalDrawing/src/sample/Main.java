@@ -5,6 +5,7 @@ import javafx.scene.Scene;
 import javafx.scene.Group;
 import javafx.scene.shape.Line;
 import javafx.scene.shape.Ellipse;
+import javafx.scene.shape.Circle;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
@@ -16,15 +17,25 @@ public class Main extends Application{
     public void start(Stage primaryStage) throws Exception {
         // TODO Auto-generated method stub
 
-//        Line line = new Line(, , , );
-//        Line line2 = new Line(, , ,);
-
         Ellipse body = new Ellipse(300, 400, 250, 150);
         body.setFill(Color.WHITE);
         body.setStroke(Color.BLACK);
 
+        Circle eye = new Circle(150, 350, 30);
+        eye.setFill(Color.BLACK);
+
+        Circle eye2 = new Circle(160, 340, 10);
+        eye2.setStroke(Color.BLACK);
+        eye2.setFill(Color.WHITE);
+
+        Line tail1 = new Line(550, 400, 700, 200);
+
+        Line tail2 = new Line(550, 400, 700, 600);
+
+        Line tail3 = new Line(700, 200, 700, 600);
+
         Group root = new Group(); //Creating a Group
-        root.getChildren().addAll(body); //adding the class object //to the group
+        root.getChildren().addAll(body, eye, eye2, tail1, tail2, tail3); //adding the class object //to the group
         Scene scene = new Scene(root,800,800);
         primaryStage.setScene(scene);
         primaryStage.setTitle("First Animal Drawing");
