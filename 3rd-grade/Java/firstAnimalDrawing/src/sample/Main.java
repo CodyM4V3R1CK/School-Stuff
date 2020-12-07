@@ -47,14 +47,17 @@ public class Main extends Application{
         Line upperTail3 = new Line(250, 200, 450, 200);
         upperTail3.setStrokeWidth(3.0);
 
-//        Line lowerTail1 = new Line();
+        Line lowerTail1 = new Line(200, 538, 250, 580);
+        lowerTail1.setStrokeWidth(3.0);
 
-//        Line lowerTail2 = new Line();
+        Line lowerTail2 = new Line(400, 538, 450 ,580 );
+        lowerTail2.setStrokeWidth(3.0);
 
-//        Line lowerTail3 = new Line();
+        Line lowerTail3 = new Line(250, 580, 450, 580);
+        lowerTail3.setStrokeWidth(3.0);
 
         Group root = new Group(); //Creating a Group
-        root.getChildren().addAll(body, eye, eye2, tail1, tail2, tail3, upperTail1, upperTail2, upperTail3);
+        root.getChildren().addAll(body, eye, eye2, tail1, tail2, tail3, upperTail1, upperTail2, upperTail3, lowerTail1, lowerTail2, lowerTail3);
         Scene scene = new Scene(root,800,800);
         primaryStage.setScene(scene);
         primaryStage.setTitle("First Animal Drawing");
