@@ -38,20 +38,23 @@ public class Main extends Application{
         Line tail3 = new Line(700, 200, 700, 600);
         tail3.setStrokeWidth(3.0);
 
-//        Line upperTail1 = new Line();
-//
-//        Line upperTail2 = new Line();
-//
-//        Line upperTail3 = new Line();
-//
+        Line upperTail1 = new Line(200, 262, 250, 200);
+        upperTail1.setStrokeWidth(3.0);
+
+        Line upperTail2 = new Line(400, 262, 450, 200);
+        upperTail2.setStrokeWidth(3.0);
+
+        Line upperTail3 = new Line(250, 200, 450, 200);
+        upperTail3.setStrokeWidth(3.0);
+
 //        Line lowerTail1 = new Line();
-//
+
 //        Line lowerTail2 = new Line();
-//
+
 //        Line lowerTail3 = new Line();
 
         Group root = new Group(); //Creating a Group
-        root.getChildren().addAll(body, eye, eye2, tail1, tail2, tail3); //adding the class object //to the group
+        root.getChildren().addAll(body, eye, eye2, tail1, tail2, tail3, upperTail1, upperTail2, upperTail3);
         Scene scene = new Scene(root,800,800);
         primaryStage.setScene(scene);
         primaryStage.setTitle("First Animal Drawing");
