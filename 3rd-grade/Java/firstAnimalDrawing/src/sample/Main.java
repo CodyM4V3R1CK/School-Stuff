@@ -17,6 +17,8 @@ public class Main extends Application{
     public void start(Stage primaryStage) throws Exception {
         // TODO Auto-generated method stub
 
+        //main body
+
         Ellipse body = new Ellipse(300, 400, 250, 150);
         body.setFill(Color.WHITE);
         body.setStroke(Color.BLACK);
@@ -29,6 +31,8 @@ public class Main extends Application{
         eye2.setStroke(Color.BLACK);
         eye2.setFill(Color.WHITE);
 
+        //back fin
+
         Line tail1 = new Line(550, 400, 700, 200);
         tail1.setStrokeWidth(3.0);
 
@@ -38,6 +42,8 @@ public class Main extends Application{
         Line tail3 = new Line(700, 200, 700, 600);
         tail3.setStrokeWidth(3.0);
 
+        //upper fin
+
         Line upperTail1 = new Line(200, 262, 250, 200);
         upperTail1.setStrokeWidth(3.0);
 
@@ -46,6 +52,8 @@ public class Main extends Application{
 
         Line upperTail3 = new Line(250, 200, 450, 200);
         upperTail3.setStrokeWidth(3.0);
+
+        //lower fin
 
         Line lowerTail1 = new Line(200, 538, 250, 580);
         lowerTail1.setStrokeWidth(3.0);
