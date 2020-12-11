@@ -24,7 +24,17 @@ int main(void) {
     // make an array that contains all 3 numbers
 
     char hexCode[100][3];
-
+    int a, b = 0;
+    while(b <= 3){
+        a = 0;
+        while(a < 100){
+            if(hexCode[a][b] == ":"){
+                a++;
+            }
+            
+        }
+        b++
+    }
 
     return 0;
 }
