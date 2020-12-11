@@ -23,7 +23,7 @@ int main(void) {
 
     // make an array that contains all 3 numbers
 
-    int hexCode[100][3];
+    char hexCode[100][3];
 
 
     return 0;
