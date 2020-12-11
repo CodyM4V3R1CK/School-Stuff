@@ -8,7 +8,7 @@ int main(void) {
         exit(1);
     }
 
-    fscanf(hex, "%s", hexNumber);
+    fscanf(hex, "%[^\t]", hexNumber);
     printf("Data from the file:\n%s", hexNumber);
     fclose(hex);
 
