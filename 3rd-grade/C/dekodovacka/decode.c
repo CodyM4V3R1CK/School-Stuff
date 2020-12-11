@@ -15,11 +15,11 @@ int main(void) {
     printf("\n------------------------------\n");
     fclose(hex);
 
-int tmp = 0;
-while (tmp < 1000){
-    printf("%c", hexNumber[tmp]);
-    tmp++;
-}
+// int tmp = 0;
+// while (tmp < 1000){
+//     printf("%c", hexNumber[tmp]);
+//     tmp++;
+// }
 
     // make an array that contains all 3 numbers
 
