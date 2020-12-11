@@ -15,30 +15,33 @@ int main(void) {
     printf("\n------------------------------\n");
     fclose(hex);
 
-// int tmp = 0;
-// while (tmp < 1000){
-//     printf("%c", hexNumber[tmp]);
-//     tmp++;
-// }
+int tmp = 0;
+while (tmp < 1000){
+    printf("%c", hexNumber[tmp]);
+    tmp++;
+}
 
     // make an array that contains all 3 numbers
 
-    char hexCode[3][100];
-    int a, b = 0, c = 0;
-    while(b <= 3){
-        a = 0;
-        while(a < 100){
-            if(hexNumber[c] = ":"){
-                a++;
-                c++;
-            }else if(hexNumber[c] == "\t"){
-                break;
-            }
-            hexCode[b][a] == hexNumber[c];
-            c++;
-        }
-        b++;
-    }
+    // char hexCode[3][100];
+    // int a, b = 0, c = 0;
+    // while(b <= 3){
+    //     a = 0;
+    //     while(a < 100){
+    //         printf("%c", hexNumber[c]);
+    //         if(hexNumber[c] == ":"){
+    //             a++;
+    //             c++;
+    //             printf("here");
+    //         }else if(hexNumber[c] == "\t"){
+    //             break;
+    //         }
+    //         hexCode[b][a] == hexNumber[c];
+    //         c++;
+    //         a++;
+    //     }
+    //     b++;
+    // }
 
     return 0;
 }
