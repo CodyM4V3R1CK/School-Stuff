@@ -23,17 +23,21 @@ int main(void) {
 
     // make an array that contains all 3 numbers
 
-    char hexCode[100][3];
-    int a, b = 0;
+    char hexCode[3][100];
+    int a, b = 0, c = 0;
     while(b <= 3){
         a = 0;
         while(a < 100){
-            if(hexCode[a][b] == ":"){
+            if(hexNumber[c] = ":"){
                 a++;
+                c++;
+            }else if(hexNumber[c] == "\t"){
+                break;
             }
-            
+            hexCode[b][a] == hexNumber[c];
+            c++;
         }
-        b++
+        b++;
     }
 
     return 0;
