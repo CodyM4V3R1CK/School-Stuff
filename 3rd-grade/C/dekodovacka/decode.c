@@ -3,7 +3,7 @@
 
 int main(void) {
     //read from text file and save into hexNumbers
-    char hexNumber[1000];
+    char hexNumber[150];
     FILE *hex;
     if ((hex = fopen("intelHEX.txt", "r")) == NULL) {
         printf("Error! opening file");
@@ -15,20 +15,20 @@ int main(void) {
     printf("\n------------------------------\n");
     fclose(hex);
 
-// int tmp = 0;
-// while (tmp < 1000){
-//     printf("%c", hexNumber[tmp]);
-//     tmp++;
-// }
+int tmp = 0;
+while (tmp < 150){
+    printf("%c", hexNumber[tmp]);
+    tmp++;
+}
 
     // make an array that contains all 3 numbers
 
     // char hexCode[3][100];
     // int a, b = 0, c = 0;
-    // while(b <= 3){
+    // while(b < 3){
     //     a = 0;
     //     while(a < 100){
-    //         printf("%c", hexNumber[c]);
+    //         // printf("%c", hexNumber[c]);
     //         if(hexNumber[c] == ":"){
     //             a++;
     //             c++;
@@ -37,6 +37,7 @@ int main(void) {
     //             break;
     //         }
     //         hexCode[b][a] == hexNumber[c];
+    //         printf("%c", hexCode[b][a]);
     //         c++;
     //         a++;
     //     }
