@@ -1,7 +1,7 @@
 #include <stdio.h>
-#include <stdlib.h> // For exit() function
-int main() {
-    char c[1000];
+#include <stdlib.h>
+int main(void) {
+    char hexNumber[1000];
     FILE *hex;
     if ((hex = fopen("intelHEX.txt", "r")) == NULL) {
         printf("Error! opening file");
@@ -10,8 +10,8 @@ int main() {
     }
 
     // reads text until newline is encountered
-    fscanf(hex, "%[^\n]", c);
-    printf("Data from the file:\n%s", c);
+    fscanf(hex, "%[^\n]", hexNumber);
+    printf("Data from the file:\n%s", hexNumber);
     fclose(hex);
 
     return 0;
