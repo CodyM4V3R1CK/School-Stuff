@@ -1,0 +1,10 @@
+Pocet zaznamov:  1
+
+1. zaznam
+---------------------------
+Meno:		 Cody
+Pocet rokov:	 18
+Vyska:		 170 cm
+Hmotnost:	 85.0 kg
+---------------------------
+
