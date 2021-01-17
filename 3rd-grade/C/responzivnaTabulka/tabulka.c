@@ -112,54 +112,48 @@ int main(){
             vek = vek - 2;
             strncat(rvek, &r, 2);
         }else if(vek == 1){
-        char r[10] = "I";
-        vek = vek - 1;
-        strncat(rvek, &r, 1);
+            char r[10] = "I";
+            vek = vek - 1;
+            strncat(rvek, &r, 1);
+        }
     }
-}
     printf("\n  %s", rvek);
 
-    // while(meno[i] != "\n"){
-    //     if(meno[i]!=' '){
-    //         pzMeno++;
-    //     }else if(meno[i]==' ' || meno[i] != '\n' || meno[i] != '\t'){
-    //         pzMeno++;
-    //     }
-    //     i++;
-    // }
-    // printf("%d", pzMeno);
-    // i = 0;
+    for(i = 0; meno[i] != '\0'; i++){
+        if(meno[i]!=' '){
+            pzMeno++;
+        }
+        else if(meno[i]==' ' || meno[i] != '\n' || meno[i] != '\t'){
+            pzMeno++;
+        }
+    }
 
-    // while(tel[i] != "\n"){
-    //     if(tel[i]!=' '){
-    //         pzTel++;
-    //     }else if(tel[i]==' ' || tel[i] != '\n' || tel[i] != '\t'){
-    //         pzTel++;
-    //     }
-    //     i++;
-    // }
+    for(i = 0; tel[i] != '\0'; i++){
+        if(tel[i]!=' '){
+            pzTel++;
+        }
+        else if(tel[i]==' ' || tel[i] != '\n' || tel[i] != '\t'){
+            pzTel++;
+        }
+    }
 
-    // i = 0;
+    for(i = 0; vyska[i] != '\0'; i++){
+        if(vyska[i]!=' '){
+            pzVyska++;
+        }
+        else if(vyska[i]==' ' || vyska[i] != '\n' || vyska[i] != '\t'){
+            pzVyska++;
+        }
+    }
 
-    // while(vyska[i] != "\n"){
-    //     if(vyska[i]!=' '){
-    //         pzVyska++;
-    //     }else if(vyska[i]==' ' || vyska[i] != '\n' || vyska[i] != '\t'){
-    //         pzVyska++;
-    //     }
-    //     i++;
-    // }
-
-    // i = 0;
-    
-    // while(rvek[i] != "\n"){
-    //     if(rvek[i]!=' '){
-    //         pzRvek++;
-    //     }else if(rvek[i]==' ' || rvek[i] != '\n' || rvek[i] != '\t'){
-    //         pzRvek++;
-    //     }
-    //     i++;
-    // }
+    for(i = 0; rvek[i] != '\0'; i++){
+        if(rvek[i]!=' '){
+            pzRvek++;
+        }
+        else if(rvek[i]==' ' || rvek[i] != '\n' || rvek[i] != '\t'){
+            pzRvek++;
+        }
+    }
 
     if(pzMeno > pzTel && pzMeno > pzVyska && pzMeno > pzRvek){
         pzMax = pzMeno;
@@ -171,171 +165,170 @@ int main(){
         pzMax = pzRvek;
     }
 
+    pzMeno = 0;
+    pzTel = 0;
+    pzVyska = 0;
+    pzRvek = 0;
+
 ///////////////////Tabulka///////////////////
 
-system("clear");
-i=0;
-                            while (i!=4){ //
-                                printf("-");
-                                ++i;
-                            }
-                            i=0;
-                            printf(" Matej Holarek ");
-                            while (i!= pzMax){
-                                printf("-");
-                                ++i;
-                            }
-                            i=0;
-                            ////
-                            printf("\n|");
-                            while(i!=18+pzMax){
-                                printf(" ");
-                                ++i;
-                            }
-                            i=0;
-                            printf("|\n");
-                            ////
-                            printf("|");
-                            while(i!=18+pzMax){
-                                printf("-");
-                                ++i;
-                            }
-                            printf("|");
-                            i=0;
+    system("clear");
+    i=0;
+    while(i!=4){ //
+        printf("-");
+        ++i;
+    }
+    i=0;
+    printf(" Matej Holarek ");
+    while(i!= pzMax){
+        printf("-");
+        ++i;
+    }
+    i=0;
+    ////
+    printf("\n|");
+    while(i!=18+pzMax){
+        printf(" ");
+        ++i;
+    }
+    i=0;
+    printf("|\n");
+    ////
+    printf("|");
+    while(i!=18+pzMax){
+        printf("-");
+        ++i;
+    }
+    printf("|");
+    i=0;
 
 ////////// riadok meno /////////
-        printf("\n|               |  ");
-        while(i!=pzMax){
-            printf(" ");
-            ++i;
-        }
-        i=0;
-        printf("|");
-
-        printf("\n| Meno          | ");
-        while(i!=pzMeno){
-            printf(" ");
-            ++i;
-        }
-        i=0;
-        printf("%s |", meno);
-
-        printf("\n|               |  ");
-        while(i!=pzMax){
-            printf(" ");
-            ++i;
-        }
-        i=0;
-        printf("|\n");
+    printf("\n|               |  ");
+    while(i!=pzMax){
+        printf(" ");
+        ++i;
+    }
+    i=0;
+    printf("|");
+    printf("\n| Meno          | ");
+    while(i!=pzMeno){
+        printf(" ");
+        ++i;
+    }
+    i=0;
+    printf("%s |", meno);
+    printf("\n|               |  ");
+    while(i!=pzMax){
+        printf(" ");
+        ++i;
+    }
+    i=0;
+    printf("|\n");
 /////////////////////////////////////////////////////
 
-                            printf("|");
-                            while(i!=18+pzMax){
-                                printf("-");
-                                ++i;
-                            }
-                            i=0;
-                            printf("|");
+    printf("|");
+    while(i!=18+pzMax){
+        printf("-");
+        ++i;
+    }
+    i=0;
+    printf("|");
 
 ///////// riadok vyska ///////////
-        printf("\n|               |  ");
-        while(i!=pzMax){
-            printf(" ");
-            ++i;
-        }
-        i=0;
-        printf("|");
+    printf("\n|               |  ");
+    while(i!=pzMax){
+        printf(" ");
+        ++i;
+    }
+    i=0;
+    printf("|");
 
-        printf("\n| Vyska         | ");
-        while(i!=pzVyska){
-            printf(" ");
-            ++i;
-        }
-        i=0;
-        printf("%s |", vyska);
+    printf("\n| Vyska         | ");
+    while(i!=pzVyska){
+        printf(" ");
+        ++i;
+    }
+    i=0;
+    printf("%s |", vyska);
 
-        printf("\n|               |  ");
-        while(i!=pzMax){
-            printf(" ");
-            ++i;
-        }
-        i=0;
-        printf("|\n");
+    printf("\n|               |  ");
+    while(i!=pzMax){
+        printf(" ");
+        ++i;
+    }
+    i=0;
+    printf("|\n");
 /////////////////////////////////////////////////////
 
-                            printf("|");
-                            while(i!=18+pzMax){
-                                printf("-");
-                                ++i;
-                            }
-                            i=0;
-                            printf("|");
+    printf("|");
+    while(i!=18+pzMax){
+        printf("-");
+        ++i;
+    }
+    i=0;
+    printf("|");
 
 /////////// riadok rok////////
-        printf("\n|               |  ");
-        while(i!=pzMax){
-            printf(" ");
-            ++i;
-        }
-        i=0;
-        printf("|");
-
-        printf("\n| Rok narodenia | ");
-        while(i!=pzRvek){
-            printf(" ");
-            ++i;
-        }
-        i=0;
-        printf("%s |", rvek);
-
-        printf("\n|               |  ");
-        while(i!=pzMax){
-            printf(" ");
-            ++i;
-        }
-        i=0;
-        printf("|\n");
+    printf("\n|               |  ");
+    while(i!=pzMax){
+        printf(" ");
+        ++i;
+    }
+    i=0;
+    printf("|");
+    printf("\n| Rok narodenia | ");
+    while(i!=pzRvek){
+        printf(" ");
+        ++i;
+    }
+    i=0;
+    printf("%s |", rvek);
+    printf("\n|               |  ");
+    while(i!=pzMax){
+        printf(" ");
+        ++i;
+    }
+    i=0;
+    printf("|\n");
 /////////////////////////////////////////////////////
 
-                            printf("|");
-                            while(i!=18+pzMax){
-                                printf("-");
-                                ++i;
-                            }
-                            i=0;
-                            printf("|");
+    printf("|");
+    while(i!=18+pzMax){
+        printf("-");
+        ++i;
+    }
+    i=0;
+    printf("|");
 
 ///////// riadok tel.///////////
-        printf("\n|               |  ");
-        while(i!=pzMax){
-            printf(" ");
-            ++i;
-        }
-        i=0;
-        printf("|");
-
-        printf("\n| Tel.          | ");
-        while(i!=pzTel){
-            printf(" ");
-            ++i;
-        }
-        i=0;
-        printf("%s |", tel);
-
-        printf("\n|               |  ");
-        while(i!=pzMax){
-            printf(" ");
-            ++i;
-        }
-        i=0;
-        printf("|\n");
+    printf("\n|               |  ");
+    while(i!=pzMax){
+        printf(" ");
+        ++i;
+    }
+    i=0;
+    printf("|");
+    printf("\n| Tel.          | ");
+    while(i!=pzTel){
+        printf(" ");
+        ++i;
+    }
+    i=0;
+    printf("%s |", tel);
+    printf("\n|               |  ");
+    while(i!=pzMax){
+        printf(" ");
+        ++i;
+    }
+    i=0;
+    printf("|\n");
 /////////////////////////////////////////////////////
 
-                            while(i!=20+pzMax){
-                                printf("-");
-                                ++i;
-                            }
-                            i=0;
+    while(i!=20+pzMax){
+        printf("-");
+        ++i;
+    }
+    i=0;
 
 /////////////////////////////////////////////////////
 
