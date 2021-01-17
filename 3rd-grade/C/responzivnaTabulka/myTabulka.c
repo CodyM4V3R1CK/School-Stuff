@@ -1,10 +1,11 @@
 #include <stdio.h>
+#include <string.h>
 
 typedef struct zaznam{
     char meno[30];
     int vyska;
     int rokNarodenia;
-    int tel;
+    char tel[15];
 } Zaznam;
 
 void decimal2roman(int num);
@@ -16,6 +17,8 @@ int main (void){
     printf("zadaj meno: ");
     scanf("%[^\n]", &clovek[1].meno);
 
+    printf("test %s", clovek[1].meno[1]);
+
     printf("zadaj vysku: ");
     scanf("%d", &clovek[1].vyska);
 
@@ -23,11 +26,17 @@ int main (void){
     scanf("%d", &clovek[1].rokNarodenia);
 
     printf("zadaj telefonne cislo v tvare (xxxxxxxxxx bez medzier): ");
-    scanf(" %d", &clovek[1].tel);
+    scanf(" %[^\n]", &clovek[1].tel);
 
-    // decimal2roman(clovek[1].rokNarodenia);
+    int longest = 0;
+    if(strlen(clovek[1].meno) >= strlen(clovek[1].tel)){
+        longest = strlen(clovek[1].meno);
+    }else{
+        longest = strlen(clovek[1].tel);
+    }
 
-    return 0;
+    printf("%d", longest);
+
 }
 
 void decimal2roman(int num){
@@ -42,4 +51,3 @@ void decimal2roman(int num){
         }
         i++;    //move to next base value to divide num
     }
-}
