@@ -5,10 +5,10 @@
 
 int main(){
 
-    int vyska, vek, longest;
+    int vyska, vek, longest = 0;
     char meno[100], tel[30], rvek[100];
 
-    printf("\n Zadajte vase meno, priezvisko: ");
+    printf("\n Zadajte vase meno: ");
     gets(meno);
 
     printf(" Zadajte vase telefonne cislo (**********): ");
@@ -120,6 +120,8 @@ int main(){
     }
 }
     printf("\n  %s", rvek);
+
+
 
     return 0;
 }
