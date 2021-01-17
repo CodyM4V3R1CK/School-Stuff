@@ -5,8 +5,8 @@
 
 int main(){
 
-    int vyska, vek, longest = 0;
-    char meno[100], tel[30], rvek[100];
+    int i = 0, vek, longest = 0, pzMax, pzMeno = 0, pzTel = 0, pzVyska = 0, pzRvek = 0;
+    char meno[100], tel[30], rvek[100] = "", vyska[5];
 
     printf("\n Zadajte vase meno: ");
     gets(meno);
@@ -19,8 +19,6 @@ int main(){
 
     printf(" Zadajte rok narodneia (rok musi byt 1 - 3000): ");
     scanf("%d", &vek);
-
-    
 
     if(vek > 3000 || vek <= 0){
         system("clear");
@@ -121,7 +119,47 @@ int main(){
 }
     printf("\n  %s", rvek);
 
+    while(meno[i] != "\0"){
+        if(meno[i]!=' '){
+            pzMeno++;
+        }else if(meno[i]==' ' || meno[i] != '\n' || meno[i] != '\t'){
+            pzMeno++;
+        }
+        i++;
+    }
 
+    i = 0;
+
+    while(tel[i] != "\0"){
+        if(tel[i]!=' '){
+            pzTel++;
+        }else if(tel[i]==' ' || tel[i] != '\n' || tel[i] != '\t'){
+            pzTel++;
+        }
+        i++;
+    }
+
+    i = 0;
+
+    while(vyska[i] != "\0"){
+        if(vyska[i]!=' '){
+            pzVyska++;
+        }else if(vyska[i]==' ' || vyska[i] != '\n' || vyska[i] != '\t'){
+            pzVyska++;
+        }
+        i++;
+    }
+
+    i = 0;
+    
+    while(rvek[i] != "\0"){
+        if(rvek[i]!=' '){
+            pzRvek++;
+        }else if(rvek[i]==' ' || rvek[i] != '\n' || rvek[i] != '\t'){
+            pzRvek++;
+        }
+        i++;
+    }
 
     return 0;
 }
